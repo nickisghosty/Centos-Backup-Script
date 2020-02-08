@@ -191,9 +191,9 @@ function startBackup {
         # step 1: check if and then mount remote backup host or skip
         remoteBackup
         createTemporaryFolder
-        # step 1: delete old backups
+        # step 2: delete old backups
         deleteOldBackups $BACKUP_COPIES
-        # step 2: shift the middle snapshots(s) back by one, if they exist
+        # step 3: shift the middle snapshots(s) back by one, if they exist
         shiftBackups
         # step 4: dump sql dbs
         dumpSQL
